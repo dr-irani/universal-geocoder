@@ -133,7 +133,8 @@ class Geocoder(GeocodeBase):
         Inputs: lat/lon point in string/tuple format, pickle name (optional)
         Outputs: dataframe of geocoded information
         """
-        df = super().geocode_point(coord) 
+        df = super().geocode_point(coord)
+        print (df)
         return self.geocode(df, str(pickle_name))
 
     def geocode_df(self, df, pickle_name=cn.REFERENCE_PICKLE):
